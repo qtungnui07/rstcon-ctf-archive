@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedVault · Sign In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-brand">
+        <span class="mark">+</span>
+        <span class="wordmark">Med<strong>Vault</strong></span>
+      </div>
+      <p class="login-subtitle">Prescription Inventory Management System</p>
+
+      <div class="login-notice">
+        <svg class="login-notice-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+          <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+        </svg>
+        <span>Authorized personnel only. All activity is monitored and logged.</span>
+      </div>
+
+      
+      <div class="login-error">Invalid username or password.</div>
+      
+
+      <form method="post" action="/login" class="login-form">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" autocomplete="username" required autofocus>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" autocomplete="current-password" required>
+        </div>
+        <button type="submit" class="login-btn">Sign In</button>
+      </form>
+
+      <div class="login-footer">
+        <div class="hipaa-badge">
+          <svg viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5C17.944 5.66 18 6.328 18 7c0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.672.056-1.34.166-1.999zM10 6a1 1 0 011 1v3a1 1 0 11-2 0V7a1 1 0 011-1zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/>
+          </svg>
+          <span>HIPAA Compliant System</span>
+        </div>
+        <p class="login-legal">
+          This system contains Protected Health Information (PHI) governed by
+          the Health Insurance Portability and Accountability Act. Unauthorized
+          access or disclosure is a federal offense punishable under 42 U.S.C.
+          &sect;&nbsp;1320d-6.
+        </p>
+        <p class="login-legal">
+          By signing in you agree to the
+          <a href="/tos">Acceptable Use Policy</a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="login-env">medvault.local&nbsp;&nbsp;·&nbsp;&nbsp;pharmacy // site-3&nbsp;&nbsp;·&nbsp;&nbsp;v2.1.0</div>
+  </div>
+
+</body>
+</html>

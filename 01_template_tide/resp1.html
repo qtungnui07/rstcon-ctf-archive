@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RST Hydro - Savannah Tide Report</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body data-station="8670870" data-station-name="Fort Pulaski, GA">
+<div class="app">
+
+  <div class="topbar">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#06283d" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 12c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"></path>
+        <path d="M3 17c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"></path>
+      </svg>
+    </div>
+    <div class="brand">
+      <h2>RST Hydro &middot; Savannah</h2>
+      <span>Port of Savannah Estuary Network</span>
+    </div>
+    <div class="status"><span class="dot"></span> Fort Pulaski 8670870 &middot; <span id="live-state">LIVE</span></div>
+  </div>
+
+  <div class="panel clock-panel">
+    <div class="clock-label">Station Local Time</div>
+    <div id="clock" class="seven-seg"></div>
+    <div id="clock-date" class="clock-date"></div>
+  </div>
+
+  <div class="tides">
+    <div class="panel tide high" id="tide-high" data-time="15:26">
+      <div class="tide-head"><span class="arrow">&#9650;</span> Next High Tide</div>
+      <div class="tide-time">--:--</div>
+      <div class="tide-sub">in <b class="countdown">--</b> &middot; <b class="level">-- ft</b></div>
+    </div>
+    <div class="panel tide low" id="tide-low" data-time="22:02">
+      <div class="tide-head"><span class="arrow">&#9660;</span> Next Low Tide</div>
+      <div class="tide-time">--:--</div>
+      <div class="tide-sub">in <b class="countdown">--</b> &middot; <b class="level">-- ft</b></div>
+    </div>
+  </div>
+
+  <div class="panel conditions">
+    <div class="cond-head">Live Conditions</div>
+    <div class="cond-grid">
+      <div class="stat"><span class="stat-label">Water Level</span><span class="stat-val" id="water-level">--</span><span class="stat-unit">ft MLLW</span></div>
+      <div class="stat"><span class="stat-label">Water Temp</span><span class="stat-val" id="water-temp">--</span><span class="stat-unit">&deg;F</span></div>
+      <div class="stat"><span class="stat-label">Air Temp</span><span class="stat-val" id="air-temp">--</span><span class="stat-unit">&deg;F</span></div>
+      <div class="stat"><span class="stat-label">Wind</span><span class="stat-val" id="wind">--</span><span class="stat-unit" id="wind-unit">kn</span></div>
+      <div class="stat"><span class="stat-label">Gusts</span><span class="stat-val" id="wind-gust">--</span><span class="stat-unit">kn</span></div>
+      <div class="stat"><span class="stat-label">Barometer</span><span class="stat-val" id="pressure">--</span><span class="stat-unit">mb</span></div>
+    </div>
+  </div>
+
+  <div class="panel report">
+    <div class="report-top">
+      <div class="avatar" id="report-avatar">S</div>
+      <div>
+        <h1>Tide report for 49</h1>
+        <div class="report-meta">
+          Personalized briefing &middot; Report <span id="report-no">SAV-&mdash;</span>
+          &middot; generated <span id="report-gen">&mdash;</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="report-body">
+      Conditions at the Fort Pulaski gauge are within normal range for the
+      Savannah River estuary. Plan transits around the high/low windows above;
+      pilots should confirm under-keel clearance against the live water level
+      before entering the shipping channel.
+    </p>
+
+    <form class="personalize" method="get" action="/">
+      <label for="name-input">Personalize this report</label>
+      <div class="personalize-row">
+        <input id="name-input" type="text" name="name"
+               placeholder="Name or vessel, e.g. Sea Breeze" autocomplete="off">
+        <button type="submit">Generate</button>
+      </div>
+    </form>
+
+    <div class="embed">
+      <span class="embed-label">Report template</span>
+      <code>Tide report for {{ name }}</code>
+    </div>
+  </div>
+
+  <footer>
+    <div>RST Hydro &middot; data from NOAA CO-OPS station 8670870 &middot; <span id="updated">connecting&hellip;</span></div>
+    <div class="copyright">&copy; 2026 RSTCON. All rights reserved.</div>
+  </footer>
+</div>
+<script src="/static/clock.js"></script>
+</body>
+</html>
