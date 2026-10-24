@@ -17,7 +17,7 @@ Archive các challenge đã làm tại RSTCON 2026 (on-site), author chính: **V
 | 11 | New Money | 300 | Web / Crypto — Caps Lotto-Matic | *(xem writeup)* | ✅ |
 | 12 | Shallow Exponent | 240 | Crypto — RSA mũ nhỏ | *(xem writeup)* | ✅ |
 | 13 | Truck-kun | 10 | Rev — Game Godot | `rstcon{reborn-in-another-world-but-im-playing-ctfs}` | ✅ |
-| 14 | thought_slop | ? | Pwn — C source kèm Dockerfile | — | — |
+| 14 | thought_slop | ? | Pwn — Format string qua output LLM (llama.cpp) | `rstcon{nice_flag_bro}` | ✅ |
 | 15 | carry | ? | Pwn — aarch64 ELF (chưa giải) | — | — |
 | 16 | CAN bus | ? | Forensics — candump.log (chưa giải) | — | — |
 
